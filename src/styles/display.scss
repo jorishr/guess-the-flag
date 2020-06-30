@@ -1,0 +1,46 @@
+.display-container {
+    margin: 0 auto;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        width: 50vw;
+        padding: 1em;
+        
+        li {
+            padding: .75em 1.8em;
+            margin-right: 1em;
+            background-color: wheat;
+        }
+        li:last-of-type {
+            margin-right: 0;
+        }
+
+        li:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.answer-container{
+outline: 1px solid red;
+    margin: 0 auto;
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em;
+
+    button {
+        padding: .5em 1em;
+    }
+}

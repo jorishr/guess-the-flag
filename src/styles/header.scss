@@ -1,0 +1,19 @@
+.hero {
+    position: relative;
+    height: 30vh;
+    overflow: hidden;
+
+    &__image {
+        object-fit: fill;
+    }
+
+    &__title {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        color: #F3B431;
+        text-align: center;
+    }
+}
