@@ -11,14 +11,17 @@ export default function Game(props){
  
     useEffect(() => {
         function getGameData(){
-            const countryList = [];
-            fetchData().then(list => {
-                list.map(e => countryList.push(e))
-                const options = pickRandomCountries(countryList, 4);
-                const target  = options[Math.floor(Math.random() * options.length)];
-                setOptions(options);
-                setTarget(target);
-            });
+            setTimeout(() => {
+
+                const countryList = [];
+                fetchData().then(list => {
+                    list.map(e => countryList.push(e))
+                    const options = pickRandomCountries(countryList, 4);
+                    const target  = options[Math.floor(Math.random() * options.length)];
+                    setOptions(options);
+                    setTarget(target);
+                });
+            }, 1000)
         } 
         getGameData()
     }, [countryList])
@@ -55,7 +58,12 @@ export default function Game(props){
     }
     //render
     if(!target){
-        return <div>Loading...</div>
+        return (
+            <div className="loader-container">
+                <p>Loading game data...</p>
+                <div className="loader"></div>
+            </div>
+        )
     } else {
         const { flag, name } = target;
         return (

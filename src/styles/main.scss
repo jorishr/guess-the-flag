@@ -5,4 +5,43 @@
 }
 body {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #CFC7BC;
+}
+.loader-container {
+    text-align: center;
+
+    p {
+        margin: 1em;
+        color:#804C15;
+    }
+
+    .loader {
+        margin: auto;
+        height: 50px;
+        width: 50px;
+    
+        border-radius: 50%;
+        border: solid 7px;
+        border-top-color: #F3B431;
+        border-bottom-color: #228DAF;
+        border-left-color: #F3B431;
+        border-right-color: #F3B431;
+    
+        animation: spinldr 1s linear 300ms infinite;
+    }
+    
+    @keyframes spinldr {
+        0% {
+            transform: rotate(0deg) scale(1);
+    
+        }
+        50% {
+            transform: rotate(180deg) scale(1.05);
+                /*NOOT: zonder rotate wordt transform overschreven*/
+        }
+        100% {
+            transform: rotate(360deg) scale(1);
+                /*om sneller te laten draaien kan je 720deg instellen*/
+            }
+    }
 }

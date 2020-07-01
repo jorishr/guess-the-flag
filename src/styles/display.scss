@@ -8,6 +8,7 @@
 
     h2 {
         font-size: 1.5rem;
+        color: rgba(128, 76, 21, .8);
     }
 
     ul {
@@ -21,6 +22,8 @@
             padding: .75em 1.8em;
             margin-right: 1em;
             background-color: wheat;
+            color: rgba(50,50,50,1);
+            font-weight: 500;
         }
         li:last-of-type {
             margin-right: 0;
@@ -28,12 +31,13 @@
 
         li:hover {
             cursor: pointer;
+            background-color: rgba(50,50,50,1);
+            color: wheat;
         }
     }
 }
 
-.answer-container{
-outline: 1px solid red;
+.answer-container {
     margin: 0 auto;
     width: 50vw;
     display: flex;
@@ -41,6 +45,27 @@ outline: 1px solid red;
     padding: 2em;
 
     button {
-        padding: .5em 1em;
+        font-size: .75rem;
+        padding: 1em 1em;
+        background-color: #F3B431;
+        border: none;
+        border-radius: 5%;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: rgba(50,50,50,1);
+        position: relative;
+        top: -10px;
+        box-shadow: rgba(50,50,50,.25) 2px 2px 2px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    & > .correct {
+        color: green;
+    }
+    
+    & > .wrong {
+        color: red;
     }
 }

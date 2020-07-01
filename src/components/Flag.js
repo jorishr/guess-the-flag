@@ -1,15 +1,14 @@
 import React from 'react';
-import imgWorld from '../world.jpg';
 import '../styles/flag.scss';
 
 export default function Flag(props){
     const { flag } = props;
     if(!flag){
         return (
-        <div className="flag-container">
-            <img src={imgWorld} alt="world"/>
-        </div>
-
+            <div className="loader-container">
+                <p>Loading game data...</p>
+                <div className="loader"></div>
+            </div>
         )
     } else {    
         return (

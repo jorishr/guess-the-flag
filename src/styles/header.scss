@@ -2,6 +2,7 @@
     position: relative;
     height: 30vh;
     overflow: hidden;
+    border-bottom: 3px solid #804C15;
 
     &__image {
         object-fit: fill;
@@ -15,5 +16,8 @@
         font-size: 2rem;
         color: #F3B431;
         text-align: center;
+        text-shadow: 3px 3px 0 rgba(0, 0, 0, .15); 
+        text-transform: uppercase;
+
     }
 }
