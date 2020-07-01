@@ -1,6 +1,10 @@
 # Guess the flag game in React
-
-
+Simple game: Four options are given. Guess to which country the given flag belongs
+State management for:
+- country list
+- options list
+- target
+- answer
 
 ## Generic React info
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

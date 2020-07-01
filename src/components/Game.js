@@ -11,6 +11,7 @@ export default function Game(props){
  
     useEffect(() => {
         function getGameData(){
+            //setTimeout is added so the spinning loader would be visible
             setTimeout(() => {
 
                 const countryList = [];
