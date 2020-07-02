@@ -7,16 +7,24 @@
     align-items: center;
 
     h2 {
+        margin-top: 1em;
         font-size: 1.5rem;
-        color: rgba(128, 76, 21, .8);
+        color: rgba(25, 25, 25, 1);
+        color: rgba(255,255,255, .8);
+        text-align: center;
     }
 
     ul {
         list-style-type: none;
         display: flex;
         justify-content: center;
-        width: 50vw;
+        width: 70vw;
         padding: 1em;
+  
+        @media screen and (max-width: 684px){
+            flex-direction: column;
+            width: 100vw;
+        }
         
         li {
             padding: .75em 1.8em;
@@ -24,6 +32,14 @@
             background-color: wheat;
             color: rgba(50,50,50,1);
             font-weight: 500;
+            font-size: 1.15rem;
+            box-shadow: rgba(50,50,50,.25) 2px 2px 2px;
+            border-radius: .5em;
+
+            @media screen and (max-width: 684px){
+                margin-right: 0;
+                margin-bottom: 1em;
+            }
         }
         li:last-of-type {
             margin-right: 0;
@@ -38,34 +54,57 @@
 }
 
 .answer-container {
-    margin: 0 auto;
-    width: 50vw;
+    margin: 2em auto;
+    width: 70vw;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 2em;
 
+    @media screen and (max-width: 684px){
+        flex-direction: column;
+        width: 100vw;
+        align-items: center;
+        flex-flow: column-reverse;
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        background-color:wheat;
+        text-align: center;
+        padding: 1em 1.5em;
+        border-radius: .5em;
+        margin-right: 1em;
+        font-size: 1.15rem;
+
+        & > .correct {
+            color: green;
+        }
+        
+        & > .wrong {
+            padding-bottom: .5em;
+            color: red;
+        }
+    }
     button {
-        font-size: .75rem;
-        padding: 1em 1em;
-        background-color: #F3B431;
+        font-size: .9rem;
+        padding: 1em;
+        width: 100px;
+        height: 100px;
+        background-color: #546438;
         border: none;
-        border-radius: 5%;
+        border-radius: 50%;
         text-transform: uppercase;
-        font-weight: 500;
-        color: rgba(50,50,50,1);
-        position: relative;
-        top: -10px;
+        font-weight: 700;
+        color: wheat;
         box-shadow: rgba(50,50,50,.25) 2px 2px 2px;
+
+        @media screen and (max-width: 684px){
+            margin-bottom: 1em;
+        }
 
         &:hover {
             cursor: pointer;
         }
-    }
-    & > .correct {
-        color: green;
-    }
-    
-    & > .wrong {
-        color: red;
     }
 }

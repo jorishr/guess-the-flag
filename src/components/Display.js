@@ -26,14 +26,18 @@ export default function Display(props){
     } else if(answer === 'correct'){
         return (
             <div className="answer-container">
-                <p className="correct">You answer was <span>{answer}</span>!</p>
+                <div className="answer-container__text">
+                    <p className="correct">You answer was <em>{answer}</em>!</p>
+                </div>
                 <button onClick={handleReset}>Play again</button>
             </div>
         )
     } else return (
             <div className="answer-container">
-                <p className="wrong">You answer was <span>{answer}</span>!</p>
-                <p>The correct answer was <em>{targetName}</em></p>
+                <div className="answer-container__text">
+                    <p className="wrong">You answer was <span>{answer}</span>!</p>
+                    <p>The correct answer was <em>{targetName}</em></p>
+                </div>
                 <button onClick={handleReset}>Play again</button>
             </div>
     )

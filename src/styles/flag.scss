@@ -1,9 +1,17 @@
 .flag-container {
-    width: 50vw;
+    width: 500px;
+    height: 300px;
     margin: 0 auto;
     overflow: hidden;
+
+    @media screen and (max-width: 684px){
+        width: 100vw;
+        padding: 0 .5em;
+    }
     
     img {
         width: 100%;
     }
+    box-shadow: 2px 2px 2px rgba(50,50,50,.25);
+    border-radius: .5em;
 }

@@ -6,13 +6,21 @@
 body {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #CFC7BC;
+    background-image: url(../world.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
 }
+
+
 .loader-container {
+    margin-top: 2em;
     text-align: center;
 
     p {
-        margin: 1em;
-        color:#804C15;
+        margin: 2em;
+        color:rgba(255,255,255, .8);
+        font-size: 1.15rem;
     }
 
     .loader {
