@@ -4,10 +4,6 @@
     //overflow: hidden;
     //border-bottom: 3px solid #804C15;
 
-    &__image {
-        object-fit: fill;
-    }
-
     &__title {
         position: absolute;
         left: 50%;
@@ -19,6 +15,5 @@
         text-align: center;
         text-shadow: 3px 3px 0 rgba(0, 0, 0, .15); 
         text-transform: uppercase;
-
     }
 }
