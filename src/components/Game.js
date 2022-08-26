@@ -28,7 +28,7 @@ export default function Game(props){
     }, [countryList])
     //game logic
     async function fetchData(){
-        const url = 'https://restcountries.eu/rest/v2/all'
+        const url = 'https://restcountries.com/v2/all'
         let response = await fetch(url);
         if(response.ok){
             return await response.json();
