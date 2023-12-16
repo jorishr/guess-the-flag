@@ -1,110 +1,110 @@
 .display-container {
-    margin: 0 auto;
-    padding: 1em 2em;
+  margin: 0 auto;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-top: 1em;
+    font-size: 1.5rem;
+    color: rgba(25, 25, 25, 1);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    width: 70vw;
+    padding: 1em;
 
-    h2 {
-        margin-top: 1em;
-        font-size: 1.5rem;
-        color: rgba(25, 25, 25, 1);
-        color: rgba(255,255,255, .8);
-        text-align: center;
+    @media screen and (max-width: 684px) {
+      flex-direction: column;
+      width: 100vw;
     }
 
-    ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: center;
-        width: 70vw;
-        padding: 1em;
-  
-        @media screen and (max-width: 684px){
-            flex-direction: column;
-            width: 100vw;
-        }
-        
-        li {
-            padding: .75em 1.8em;
-            margin-right: 1em;
-            background-color: wheat;
-            color: rgba(50,50,50,1);
-            font-weight: 500;
-            font-size: 1.15rem;
-            box-shadow: rgba(50,50,50,.25) 2px 2px 2px;
-            border-radius: .5em;
+    li {
+      padding: 0.75em 1.8em;
+      margin-right: 1em;
+      background-color: wheat;
+      color: rgba(50, 50, 50, 1);
+      font-weight: 500;
+      font-size: 1.15rem;
+      box-shadow: rgba(50, 50, 50, 0.25) 2px 2px 2px;
+      border-radius: 0.5em;
 
-            @media screen and (max-width: 684px){
-                margin-right: 0;
-                margin-bottom: 1em;
-            }
-        }
-        li:last-of-type {
-            margin-right: 0;
-        }
-
-        li:hover {
-            cursor: pointer;
-            background-color: rgba(50,50,50,1);
-            color: wheat;
-        }
+      @media screen and (max-width: 684px) {
+        margin-right: 0;
+        margin-bottom: 1em;
+      }
     }
+    li:last-of-type {
+      margin-right: 0;
+    }
+
+    li:hover {
+      cursor: pointer;
+      background-color: rgba(50, 50, 50, 1);
+      color: wheat;
+    }
+  }
 }
 
 .answer-container {
-    margin: 2em auto;
-    width: 70vw;
+  margin: 2em auto;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+
+  @media screen and (max-width: 684px) {
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    flex-flow: column-reverse;
+  }
+
+  &__text {
     display: flex;
-    justify-content: center;
-    padding: 2em;
+    flex-direction: column;
+    background-color: wheat;
+    text-align: center;
+    padding: 1em 1.5em;
+    border-radius: 0.5em;
+    margin-right: 1em;
+    font-size: 1.15rem;
 
-    @media screen and (max-width: 684px){
-        flex-direction: column;
-        width: 100vw;
-        align-items: center;
-        flex-flow: column-reverse;
+    & > .correct {
+      color: green;
     }
 
-    &__text{
-        display: flex;
-        flex-direction: column;
-        background-color:wheat;
-        text-align: center;
-        padding: 1em 1.5em;
-        border-radius: .5em;
-        margin-right: 1em;
-        font-size: 1.15rem;
-
-        & > .correct {
-            color: green;
-        }
-        
-        & > .wrong {
-            padding-bottom: .5em;
-            color: red;
-        }
+    & > .wrong {
+      padding-bottom: 0.5em;
+      color: red;
     }
-    button {
-        font-size: .9rem;
-        padding: 1em;
-        width: 100px;
-        height: 100px;
-        background-color: #546438;
-        border: none;
-        border-radius: 50%;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: wheat;
-        box-shadow: rgba(50,50,50,.25) 2px 2px 2px;
+  }
+  button {
+    font-size: 0.9rem;
+    padding: 1em;
+    width: 100px;
+    height: 100px;
+    background-color: #546438;
+    border: none;
+    border-radius: 50%;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: wheat;
+    box-shadow: rgba(50, 50, 50, 0.25) 2px 2px 2px;
 
-        @media screen and (max-width: 684px){
-            margin-bottom: 1em;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
+    @media screen and (max-width: 684px) {
+      margin-bottom: 1em;
     }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
