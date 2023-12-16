@@ -6,17 +6,17 @@ echo -e "-----------------------------------\033[0m\n"
 set -e
 
 echo -e "=== Start backup existing files... ===\n"
-DIR_PATH_BASE="/var/www/guess-the-flag.jorisr.com"
+DIR_PATH_BASE="<add_base_folder_here>"
 BACKUP_FOLDER="$DIR_PATH_BASE/backup/backup_$(date +%Y-%m-%d_%H-%M)"
 mkdir -p "$BACKUP_FOLDER"
-if cp -r "$DIR_PATH_BASE/build/" "$BACKUP_FOLDER"; then
+if cp -r "$DIR_PATH_BASE/<folder>/" "$BACKUP_FOLDER"; then
     echo -e "\033[32m✓ Backup completed\033[0m\n"
 else
     echo -e "\033[1;31m✗ Error: backup failed.\033[0m\n"
 fi
 
 echo -e "=== Start cloning github repo... ===\n"
-GITHUB_REPO_URL="https://github.com/jorishr/guess-the-flag.git"
+GITHUB_REPO_URL="<git_repo_url>"
 NEW_RELEASE_FOLDER="$DIR_PATH_BASE/new_release"
 
 git clone "$GITHUB_REPO_URL" "$NEW_RELEASE_FOLDER"
