@@ -1,19 +1,14 @@
 .hero {
-    position: relative;
-    height: 10vh;
-    //overflow: hidden;
-    //border-bottom: 3px solid #804C15;
+  position: relative;
+  padding: 2.5em 1em;
+  margin-bottom: 1em;
 
-    &__title {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        margin-top: 1em;
-        font-size: 2rem;
-        color: #F3B431;
-        text-align: center;
-        text-shadow: 3px 3px 0 rgba(0, 0, 0, .15); 
-        text-transform: uppercase;
-    }
+  &__title {
+    color: #f3b431;
+
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+    text-transform: uppercase;
+  }
 }
