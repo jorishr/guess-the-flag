@@ -5,17 +5,29 @@ import Game from "./components/Game";
 import Modal from "./components/Modal";
 
 function App() {
-  const [statusModal, setStatusModal] = useState(true);
+  const [showModal, setShowModal] = useState(true);
+  const [totalRounds, setTotalRounds] = useState(5);
 
-  const onClose = () => {
-    setStatusModal(false);
+  const handleChange = (e) => {
+    e.preventDefault();
+    setTotalRounds(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowModal(!showModal);
   };
 
   return (
     <>
       <Header />
-      <Game />
-      <Modal onClose={onClose} statusModal={statusModal} />
+      <Game totalRounds={totalRounds} setShowModal={setShowModal} />
+      <Modal
+        showModal={showModal}
+        totalRounds={totalRounds}
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+      />
     </>
   );
 }
