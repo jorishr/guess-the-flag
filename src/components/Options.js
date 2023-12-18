@@ -9,7 +9,7 @@ export default function Display(props) {
     return (
       <>
         <div className="options-container">
-          <h2 class="options__title">
+          <h2 className="options__title">
             Which country does this flag belong to?
           </h2>
           <ul className="options__list">

@@ -4,7 +4,7 @@ import Flag from "./Flag";
 
 export default function Game(props) {
   //state
-  const [countryList, setCountrList] = useState([]);
+  const [countryList, setCountryList] = useState([]);
   const [options, setOptions] = useState([]);
   const [target, setTarget] = useState({});
   const [answer, setAnswer] = useState(undefined);
@@ -54,7 +54,7 @@ export default function Game(props) {
   function handleReset() {
     setAnswer("");
     setTarget(undefined);
-    setCountrList([]);
+    setCountryList([]);
   }
   //render
   if (!target) {
