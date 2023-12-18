@@ -8,6 +8,7 @@ function App() {
   const [showModal, setShowModal] = useState(true);
   const [totalRounds, setTotalRounds] = useState(5);
 
+  /* Form handlers */
   const handleChange = (e) => {
     e.preventDefault();
     setTotalRounds(e.target.value);

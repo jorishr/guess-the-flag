@@ -27,7 +27,8 @@ export default function Game({ totalRounds, setShowModal }) {
     }
     getGameData();
   }, [countryList]);
-  //game logic
+
+  /* country list API logic */
   async function fetchData() {
     const url = "https://restcountries.com/v2/all";
     let response = await fetch(url);
@@ -47,7 +48,7 @@ export default function Game({ totalRounds, setShowModal }) {
     }
     return result;
   }
-  //event handlers
+
   function handleAnswer(e) {
     if (e.target.innerText === target.name) {
       setAnswer("correct");
@@ -70,7 +71,8 @@ export default function Game({ totalRounds, setShowModal }) {
     setRound(1);
     setShowModal(true);
   }
-  //render
+
+  /* Conditional rendering  */
   if (round <= totalRounds && !target) {
     return (
       <div className="loader-container">
@@ -94,13 +96,9 @@ export default function Game({ totalRounds, setShowModal }) {
         <Flag flag={flag} />
       </>
     );
+    //render final score
   } else {
     const verdict = Number((Number(score) / Number(totalRounds)).toFixed(1));
-    console.log(
-      Number(score / totalRounds),
-      Number(score / totalRounds).toFixed(1),
-      verdict === 1
-    );
     let message;
     switch (true) {
       case verdict === 1.0:
