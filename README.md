@@ -4,7 +4,7 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/jorishr/guess-the-flag)
 ![node-current](https://img.shields.io/node/v/node-sass)
 
-Simple game guess-the-flag game build with React. The user is presented with a flag and four options are given. Guess to which country the given flag belongs.
+Simple game guess-the-flag game build with React. The user is presented with a flag and four options are given. Guess to which country the given flag belongs. The default game has 5 rounds but the user can choose in the welcome screen to extend the game up to 100 rounds. A final score is rendered at the end of the game, including a custom message based on the final score.
 
 - [Guess the flag](#guess-the-flag)
   - [Developer notes](#developer-notes)
@@ -15,8 +15,10 @@ Simple game guess-the-flag game build with React. The user is presented with a f
 
 ### React State Management
 
-State is managed for the following items:
+State management for the following items:
 
+- game rounds
+- total score
 - country list
 - options list
 - target answer
